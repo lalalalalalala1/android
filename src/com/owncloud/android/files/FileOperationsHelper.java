@@ -339,7 +339,6 @@ public class FileOperationsHelper {
             Intent sendIntent = new Intent(android.content.Intent.ACTION_SEND);
             // set MimeType
             sendIntent.setType(file.getMimetype());
-//            sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://" + DiskLruImageCacheFileProvider.AUTHORITY + "/#" + file.getRemoteId() + "#" + file.getFileName()));
             sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://" + DiskLruImageCacheFileProvider.AUTHORITY + file.getRemotePath()));
             sendIntent.putExtra(Intent.ACTION_SEND, true);      // Send Action
 
